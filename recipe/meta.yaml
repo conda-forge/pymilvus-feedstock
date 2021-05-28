@@ -22,11 +22,12 @@ requirements:
     - setuptools-scm
     - gitpython
   run:
-    - grpcio >=1.22.0
-    - grpcio-tools >=1.22.0
+    - grpcio >=1.22.0,<1.38.0
+    - grpcio-tools >=1.22.0,<1.38.0
     - python >=3.6
     - requests >=2.22.0
     - ujson >=2.0.0
+    - mmh3
 
 test:
   imports:
