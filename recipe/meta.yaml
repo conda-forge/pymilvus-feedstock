@@ -18,21 +18,21 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.6
+    - python >=3.7
     - setuptools-scm
     - gitpython
   run:
-    - grpcio >=1.22.0,<1.38.0
-    - grpcio-tools >=1.22.0,<1.38.0
-    - python >=3.6
+    - grpcio >=1.37
+    - grpcio-tools >=1.37
+    - python >=3.7
     - requests >=2.22.0
-    - ujson >=2.0.0
-    - mmh3
+    - ujson >=2.0.0,<=5.1.0
+    - mmh3 >=2.0,<=3.0.0
+    - pandas>=1.2.4
 
 test:
   imports:
-    - milvus
-    - milvus.client
+    - pymilvus
   commands:
     - pip check
   requires:
