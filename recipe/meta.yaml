@@ -1,5 +1,5 @@
 {% set name = "pymilvus" %}
-{% set version = "1.1.2" %}
+{% set version = "2.0.1" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pymilvus-{{ version }}.tar.gz
-  sha256: 8622233c49aa9d27b84e6ee54f30d6370136a8ef4f2362b95d6499a21f5305c0
+  sha256: 13923c0bdfd670d370a69031416ce28a19ed8ad53e3674903c019480b9370820
 
 build:
   number: 0
