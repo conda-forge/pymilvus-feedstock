@@ -19,22 +19,23 @@ requirements:
   host:
     - pip
     - python >=3.7
-    - setuptools >= 67
+    - setuptools >=67
     - wheel
-    - setuptools-scm >= 6.2
+    - setuptools-scm >=6.2
     - gitpython
   run:
-    - setuptools >= 67
-    - grpcio>=1.49.1,<=1.60.0
+    - python >=3.7
+    - setuptools >=67
+    - grpcio >=1.49.1,<=1.60.0
     - grpcio-tools
-    - protobuf>=3.20.0
-    - environs<=9.5.0
+    - protobuf >=3.20.0
+    - environs <=9.5.0
     - ujson>=2.0.0
-    - pandas>=1.2.4
-    - numpy<1.25.0,
+    - pandas >=1.2.4
+    - numpy <1.25.0,
     - requests,
-    - minio>=7.0.0,
-    - pyarrow>=12.0.0,
+    - minio >=7.0.0,
+    - pyarrow >=12.0.0,
     - azure-storage-blob,
     - scipy",
 
