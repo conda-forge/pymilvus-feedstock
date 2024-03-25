@@ -32,12 +32,12 @@ requirements:
     - environs <=9.5.0
     - ujson >=2.0.0
     - pandas >=1.2.4
-    - numpy <1.25.0,
-    - requests,
-    - minio >=7.0.0,
-    - pyarrow >=12.0.0,
-    - azure-storage-blob,
-    - scipy",
+    - numpy <1.25.0
+    - requests
+    - minio >=7.0.0
+    - pyarrow >=12.0.0
+    - azure-storage-blob
+    - scipy
 
 test:
   imports:
