@@ -1,5 +1,5 @@
 {% set name = "pymilvus" %}
-{% set version = "1.1.2" %}
+{% set version = "2.4.7" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pymilvus-{{ version }}.tar.gz
-  sha256: 8622233c49aa9d27b84e6ee54f30d6370136a8ef4f2362b95d6499a21f5305c0
+  sha256: 9ef460b940782a42e1b7b8ae0da03d8cc02d9d80044d13f4b689a7c935ec7aa7
 
 build:
   number: 0
@@ -18,28 +18,32 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.6
+    - python >=3.8
     - setuptools-scm
     - gitpython
   run:
-    - grpcio >=1.22.0,<1.38.0
-    - grpcio-tools >=1.22.0,<1.38.0
-    - python >=3.6
-    - requests >=2.22.0
+    - python >=3.8
+    - setuptools >69
+    - setuptools <70.1 # [py<=38]
+    - grpcio >=1.49.1
+    - protobuf >=3.20.0
+    - python-dotenv >=1.0.1,<2.0.0
     - ujson >=2.0.0
-    - mmh3
+    - pandas >=1.2.4
+    - numpy <1.25.0; # [py<=38]
+    - milvus-lite >=2.4.0 # [not win]
 
 test:
   imports:
-    - milvus
-    - milvus.client
+    - pymilvus.MilvusClient
   commands:
     - pip check
   requires:
     - pip
 
 about:
-  home: https://github.com/milvus-io/pymilvus
+  home: https://milvus.io
+  dev_url: https://github.com/milvus-io/pymilvus
   summary: Python Sdk for Milvus
   license: Apache-2.0
   license_file: LICENSE
@@ -49,3 +53,4 @@ extra:
     - ndmaxar
     - oblute
     - rluria14
+    - cclinet
