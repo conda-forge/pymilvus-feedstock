@@ -31,7 +31,7 @@ requirements:
     - ujson >=2.0.0
     - pandas >=1.2.4
     - numpy <1.25.0;  # [py<=38]
-    - milvus-lite >=2.4.0  # [not win]
+    # - milvus-lite >=2.4.0  # [not win]
 
 test:
   imports:
