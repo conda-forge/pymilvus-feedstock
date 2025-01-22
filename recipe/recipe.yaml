@@ -1,42 +1,45 @@
 context:
   name: pymilvus
-  version: 1.1.2
+  version: 2.5.4
 
 package:
   name: ${{ name|lower }}
   version: ${{ version }}
 
 source:
-  url: https://pypi.io/packages/source/${{ name[0] }}/${{ name }}/pymilvus-${{ version }}.tar.gz
-  sha256: 8622233c49aa9d27b84e6ee54f30d6370136a8ef4f2362b95d6499a21f5305c0
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/pymilvus-${{ version }}.tar.gz
+  sha256: 611732428ff669d57ded3d1f823bdeb10febf233d0251cce8498b287e5a10ce8
 
 build:
-  number: 1
+  number: 0
   noarch: python
-  script: ${{ PYTHON }} -m pip install . -vv
+  script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
   host:
+    - python ${{ python_min }}.*
     - pip
-    - python >=3.6
-    - setuptools-scm
+    - setuptools >=67
+    - wheel
     - gitpython
+    - setuptools-scm >=6.2
   run:
-    - grpcio >=1.22.0,<1.38.0
-    - grpcio-tools >=1.22.0,<1.38.0
-    - python >=3.6
-    - requests >=2.22.0
+    - python >=${{ python_min }}
+    - setuptools >69
+    - grpcio >=1.49.1,<=1.67.1
+    - protobuf >=3.20.0
+    - python-dotenv >=1.0.1,<2.0.0
     - ujson >=2.0.0
-    - mmh3
+    - pandas >=1.2.4
+    - ${{ "milvus-lite >=2.4.0" if not win }}
 
 tests:
   - python:
       imports:
         - milvus
-        - milvus.client
       pip_check: true
-
       python_version: ${{ python_min }}.*
+
 about:
   summary: Python Sdk for Milvus
   license: Apache-2.0
