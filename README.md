@@ -1,7 +1,7 @@
 About pymilvus-feedstock
 ========================
 
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/tmpr1ojj9lf-feedstock/blob/main/LICENSE.txt)
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pymilvus-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/milvus-io/pymilvus
 
@@ -15,8 +15,8 @@ Current build status
 
 <table><tr><td>All platforms:</td>
     <td>
-      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=None&branchName=main">
-        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/tmpr1ojj9lf-feedstock?branchName=main">
+      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=12603&branchName=main">
+        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/pymilvus-feedstock?branchName=main">
       </a>
     </td>
   </tr>
