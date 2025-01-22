@@ -1,19 +1,19 @@
-{% set name = "pymilvus" %}
-{% set version = "1.1.2" %}
-
+context:
+  name: pymilvus
+  version: 1.1.2
 
 package:
-  name: {{ name|lower }}
-  version: {{ version }}
+  name: ${{ name|lower }}
+  version: ${{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pymilvus-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/${{ name[0] }}/${{ name }}/pymilvus-${{ version }}.tar.gz
   sha256: 8622233c49aa9d27b84e6ee54f30d6370136a8ef4f2362b95d6499a21f5305c0
 
 build:
-  number: 0
+  number: 1
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
+  script: ${{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
@@ -29,20 +29,19 @@ requirements:
     - ujson >=2.0.0
     - mmh3
 
-test:
-  imports:
-    - milvus
-    - milvus.client
-  commands:
-    - pip check
-  requires:
-    - pip
+tests:
+  - python:
+      imports:
+        - milvus
+        - milvus.client
+      pip_check: true
 
+      python_version: ${{ python_min }}.*
 about:
-  home: https://github.com/milvus-io/pymilvus
   summary: Python Sdk for Milvus
   license: Apache-2.0
   license_file: LICENSE
+  homepage: https://github.com/milvus-io/pymilvus
 
 extra:
   recipe-maintainers:
