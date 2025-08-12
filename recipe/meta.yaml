@@ -28,6 +28,8 @@ requirements:
     - grpcio-tools >=1.22.0,<1.38.0
     - requests >=2.22.0
     - ujson >=2.0.0
+    # seemingly needed for compatibility
+    - protobuf <3.21.0
 
 test:
   imports:
