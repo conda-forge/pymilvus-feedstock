@@ -45,6 +45,7 @@ tests:
         - ${{ python_check_max }}.*
 
 about:
+  homepage: https://github.com/milvus-io/pymilvus
   summary: Python Sdk for Milvus
   license: Apache-2.0
   license_file: LICENSE
@@ -55,3 +56,4 @@ extra:
     - ndmaxar
     - oblute
     - rluria14
+    - bollwyvl
