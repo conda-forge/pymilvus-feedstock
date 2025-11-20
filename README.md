@@ -3,7 +3,7 @@ About pymilvus-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pymilvus-feedstock/blob/main/LICENSE.txt)
 
-
+Home: https://github.com/milvus-io/pymilvus
 
 Package license: Apache-2.0
 
@@ -143,6 +143,7 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
+* [@bollwyvl](https://github.com/bollwyvl/)
 * [@hadim](https://github.com/hadim/)
 * [@ndmaxar](https://github.com/ndmaxar/)
 * [@oblute](https://github.com/oblute/)
