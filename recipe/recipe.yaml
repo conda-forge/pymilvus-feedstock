@@ -52,7 +52,6 @@ about:
 
 extra:
   recipe-maintainers:
-    - hadim
     - ndmaxar
     - oblute
     - rluria14
