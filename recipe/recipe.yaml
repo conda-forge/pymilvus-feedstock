@@ -34,7 +34,7 @@ requirements:
     - protobuf >=5.27.2
     - python >=${{ python_min }}
     - python-dotenv >=1.0.1,<2.0.0
-    - setuptools >69
+    - setuptools >=78.1.1
 
 tests:
   - python:
