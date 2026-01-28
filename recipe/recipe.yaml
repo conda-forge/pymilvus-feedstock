@@ -2,7 +2,7 @@
 schema_version: 1
 
 context:
-  version: "2.6.6"
+  version: "2.6.7"
   python_check_max: "3.14"
 
 package:
@@ -11,7 +11,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/p/pymilvus/pymilvus-${{ version }}.tar.gz
-  sha256: 2522617ea34dcc9adaad0128d230f0306962a122f08366a24dd0e84bdada1f60
+  sha256: d534804af29390d48ae7d6edf66611d6d67963ab5c06ad0b136012e4248cd422
 
 build:
   number: 0
