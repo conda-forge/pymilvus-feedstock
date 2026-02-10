@@ -24,7 +24,7 @@ requirements:
     - gitpython
     - pip
     - python ${{ python_min }}.*
-    - setuptools >=78.1.1
+    - setuptools >=67
     - setuptools-scm >=6.2
     - wheel
   run:
@@ -34,7 +34,7 @@ requirements:
     - protobuf >=5.27.2
     - python >=${{ python_min }}
     - python-dotenv >=1.0.1,<2.0.0
-    - setuptools >=78.1.1
+    - setuptools >=69
     - cachetools >=5.0.0
 
 tests:
