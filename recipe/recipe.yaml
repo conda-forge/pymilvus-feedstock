@@ -25,7 +25,7 @@ requirements:
     - pip
     - python ${{ python_min }}.*
     - setuptools >=67
-    - setuptools-scm >=6.2
+    - setuptools-scm >=6.2,<9
     - wheel
   run:
     - grpcio >=1.66.2,!=1.68.0,!=1.68.1,!=1.69.0,!=1.70.0,!=1.70.1,!=1.71.0,!=1.72.1,!=1.73.0
