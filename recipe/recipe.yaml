@@ -2,7 +2,7 @@
 schema_version: 1
 
 context:
-  version: "2.6.10"
+  version: "2.6.11"
   python_check_max: "3.14"
 
 package:
@@ -11,7 +11,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/p/pymilvus/pymilvus-${{ version }}.tar.gz
-  sha256: 58a44ee0f1dddd7727ae830ef25325872d8946f029d801a37105164e6699f1b8
+  sha256: a40c10322cde25184a8c3d84993a14dfb67ad2bdcfc5dff7e68b11a79ff8f6d8
 
 build:
   number: 0
@@ -25,7 +25,7 @@ requirements:
     - pip
     - python ${{ python_min }}.*
     - setuptools >=67
-    - setuptools-scm >=6.2
+    - setuptools-scm >=6.2,<9
     - wheel
   run:
     - grpcio >=1.66.2,!=1.68.0,!=1.68.1,!=1.69.0,!=1.70.0,!=1.70.1,!=1.71.0,!=1.72.1,!=1.73.0
