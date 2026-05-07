@@ -2,7 +2,7 @@
 schema_version: 1
 
 context:
-  version: "2.6.12"
+  version: "3.0.0"
   python_check_max: "3.14"
 
 package:
@@ -11,7 +11,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/p/pymilvus/pymilvus-${{ version }}.tar.gz
-  sha256: 8323e990dc305e607fef525498eb779e42940a69e0691dde009cd02d48845f7a
+  sha256: ae512eb3cff3401680182208af3809de0b032c5da044d992c4d248177026fbaa
 
 build:
   number: 0
@@ -24,19 +24,19 @@ requirements:
     - gitpython
     - pip
     - python ${{ python_min }}.*
-    - setuptools >=67
-    - setuptools-scm >=6.2,<9
+    - setuptools >=78.1.1
+    - setuptools-scm >=6.2
     - wheel
   run:
+    - cachetools >=5.0.0
     - grpcio >=1.66.2,!=1.68.0,!=1.68.1,!=1.69.0,!=1.70.0,!=1.70.1,!=1.71.0,!=1.72.1,!=1.73.0
     - orjson >=3.10.15
     - pandas >=1.2.4
     - protobuf >=5.27.2
     - python >=${{ python_min }}
     - python-dotenv >=1.0.1,<2.0.0
-    - setuptools >=69
-    - cachetools >=5.0.0
     - requests >=2.20.0
+    - setuptools >=78.1.1
 
 tests:
   - python:
@@ -47,7 +47,8 @@ tests:
         - ${{ python_check_max }}.*
 
 about:
-  homepage: https://github.com/milvus-io/pymilvus
+  homepage: https://pypi.org/project/pymilvus
+  repository: https://github.com/milvus-io/pymilvus
   summary: Python Sdk for Milvus
   license: Apache-2.0
   license_file: LICENSE
