@@ -3,7 +3,6 @@ schema_version: 1
 
 context:
   version: "3.0.2"
-  python_check_max: "3.14"
 
 package:
   name: pymilvus
@@ -30,7 +29,6 @@ requirements:
   run:
     - python >=${{ python_min }}
     # tightest of upstream's floors (python >=3.14) and exclusions (python <3.14)
-    # stricted constraint for python >=3.14
     - grpcio >=1.75.1,!=1.68.0,!=1.68.1,!=1.69.0,!=1.70.0,!=1.70.1,!=1.71.0,!=1.72.1,!=1.73.0
     - orjson >=3.10.15
     - protobuf >=5.27.2
@@ -45,7 +43,6 @@ tests:
       pip_check: true
       python_version:
         - ${{ python_min }}.*
-        - ${{ python_check_max }}.*
         - "*"
 
 about:
