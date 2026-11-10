@@ -2,7 +2,7 @@
 schema_version: 1
 
 context:
-  version: "3.0.2"
+  version: "3.0.3"
 
 package:
   name: pymilvus
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/p/pymilvus/pymilvus-${{ version }}.tar.gz
-  sha256: 607ac1bcc96719c1716e0027d4a59c6411ad783fb934cbe0618b6d6c0831550d
+  sha256: d439c039861e753841a0809825602cfb4f146d593f4479d83a3402b738e5968f
 
 build:
   number: 0
