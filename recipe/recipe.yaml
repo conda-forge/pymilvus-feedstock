@@ -2,21 +2,22 @@
 schema_version: 1
 
 context:
-  version: "3.0.2"
+  version: "3.0.3"
+  python_check_max: "3.15"
 
 package:
   name: pymilvus
   version: ${{ version }}
 
 source:
-  url: https://pypi.org/packages/source/p/pymilvus/pymilvus-${{ version }}.tar.gz
-  sha256: 607ac1bcc96719c1716e0027d4a59c6411ad783fb934cbe0618b6d6c0831550d
+  url: https://files.pythonhosted.org/packages/source/p/pymilvus/pymilvus-${{ version }}.tar.gz
+  sha256: d439c039861e753841a0809825602cfb4f146d593f4479d83a3402b738e5968f
 
 build:
   number: 0
   noarch: python
   script:
-    - ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check
+    - ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check --check-build-dependencies
 
 requirements:
   host:
@@ -38,12 +39,17 @@ requirements:
     - requests >=2.20.0
 
 tests:
+  - package_contents:
+      strict: true
+      site_packages:
+        - pymilvus/**
+        - pymilvus-${{ version }}.dist-info/**
   - python:
       imports: pymilvus
       pip_check: true
       python_version:
         - ${{ python_min }}.*
-        - "*"
+        - ${{ python_check_max }}.*
 
 about:
   homepage: https://pypi.org/project/pymilvus
